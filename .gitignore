@@ -1,0 +1,7 @@
+# Logs
+.history
+build/
+
+# Dependency directory
+node_modules
+
