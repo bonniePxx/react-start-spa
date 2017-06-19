@@ -2,9 +2,10 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 // 创建 application/x-www-form-urlencoded 编码解析
-var urlencodedParser = bodyParser.urlencoded({ extended: true });
-app.use(bodyParser());
-var dataJson = require('./dataJson.json');
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
 
 app.use(express.static('build'))
 
