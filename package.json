@@ -4,9 +4,9 @@
   "description": "react webpack lesson",
   "main": "index.js",
   "scripts": {
-    "dev": "node server.js",
-    "hot": "node server_hot.js",
-    "buildt": "webpack --config webpack.config.buildt.js --progress --colors --watch -p",
+    "static": "node server.js",
+    "start": "node server_hot.js",
+    "build": "webpack --config webpack.config.build.js --progress --colors --watch -p",
     "online": "webpack --config webpack.config.online.js --progress --colors --watch -p"
   },
   "repository": {
