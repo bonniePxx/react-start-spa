@@ -32,7 +32,7 @@ class Index extends React.Component {
 }
 const Home = () =>
   <div>
-    <h2>Home</h2>
+    <h2>得到mock数据form port3000</h2>
   </div>;
 
 const mapStateToProps = (state) => {

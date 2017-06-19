@@ -23,7 +23,7 @@ const _get = ({ url, query },dispatch) => {
 }
 
 export const FetchOrgList = () => {
-  const url = '/getData';
+  const url = 'http://localhost:3000/member';
   return (dispatch) =>{
     _get({url},dispatch)
       .then((json) => {

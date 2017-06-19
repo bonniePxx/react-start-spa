@@ -1,18 +1,15 @@
-var express = require('express');
-var app = express();
-var bodyParser = require('body-parser');
-// 创建 application/x-www-form-urlencoded 编码解析
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({
-  extended: true
-}));
+/*global require */
+var fakeData = require('./fake_data.js');
+var jsonServer = require('json-server');
+var fs = require('fs');
+var server = jsonServer.create();
+var data = fakeData();
+var middlewares = jsonServer.defaults();
+var router = jsonServer.router('db.json');
 
-app.use(express.static('build'))
+fs.writeFileSync('db.json', JSON.stringify(data));
 
-app.get('/', function (req, res) {
-	res.sendFile(__dirname + '/build/index.html')
-});
-
-var server = app.listen(8088, function () {
-	console.log('正常打开8088端口');
-})
+server.use(middlewares);
+server.use(router);
+server.listen(3000);
+console.log('mock server success!')
