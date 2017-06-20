@@ -1,0 +1,15 @@
+/*css moudule 用法demo   只针对类名,不使用选择器*/
+
+/*local*/
+.bg {
+  background: red;
+}
+/*global*/
+:global(.font) {
+  color: green;
+}
+/*composition  也可从其他模块导入   形如composes: className from './another.css';*/
+.btn {
+  composes: bg;
+  color: yellow;
+}

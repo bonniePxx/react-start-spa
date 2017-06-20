@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { FetchOrgList } from '../actions'
 import Tooltip from '../components/common/toast';
 
+import style from '../styles/demo.css'
+
 class Index extends React.Component {
    componentDidMount(){
     const { dispatch } = this.props
@@ -13,7 +15,7 @@ class Index extends React.Component {
     return (
       <div>
         <div className="application-head">
-        <button onClick={() => Tooltip.show('the tooltip autoHide after 2s')}>正常弹出层</button>
+        <button className={style.btn} onClick={() => Tooltip.show('the tooltip autoHide after 2s')}>正常弹出层</button>
         <button onClick={() => Tooltip.show('the tooltip autoHide after 3s', 3000)}>延时弹出层</button>
         <button onClick={() =>   {var tip = Tooltip.show('the tooltip will be hidden before the default time 2s');
     setTimeout(()=>tip.hide(), 1000);}}>弹出层</button>
@@ -32,7 +34,7 @@ class Index extends React.Component {
 }
 const Home = () =>
   <div>
-    <h2>得到mock数据form port3000</h2>
+    <h2 className="font">得到mock数据form port3000</h2>
   </div>;
 
 const mapStateToProps = (state) => {

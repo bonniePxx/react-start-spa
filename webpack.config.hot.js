@@ -36,7 +36,7 @@ module.exports = {
         }, {
             test: /\.css$/,
             exclude: /^node_modules$/,
-            loaders: ['style', 'css', 'autoprefixer'],
+            loader: 'style-loader!css-loader?modules&localIdentName=[path][name]---[local]---[hash:base64:5]!autoprefixer-loader',
             include: [APP_PATH]
         }, {
             test: /\.less$/,
