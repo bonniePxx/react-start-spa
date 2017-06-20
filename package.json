@@ -4,7 +4,7 @@
   "description": "react webpack lesson",
   "main": "index.js",
   "scripts": {
-    "static": "node server.js",
+    "static": "node static-server.js",
     "start": "concurrently \"node server_hot.js\" \"node server.js\"",
     "build": "webpack --config webpack.config.build.js --progress --colors --watch -p",
     "online": "webpack --config webpack.config.online.js --progress --colors --watch -p"
