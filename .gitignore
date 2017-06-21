@@ -1,7 +1,8 @@
 # Logs
-.history .vscode
-build/
+/.history/*
+/.vscode/*
+/build/
 
 # Dependency directory
-node_modules
+/node_modules/*
 
